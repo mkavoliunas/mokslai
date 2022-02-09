@@ -1,0 +1,19 @@
+    label {
+        color: black;
+    }
+    
+    h1 {
+        color: rgb(56, 204, 113);
+        margin: auto;
+    }
+    
+    Button {
+        background-color: khaki;
+        margin-left: 50px;
+    }
+    
+    .box {
+        height: 300px;
+        width: 500px;
+        background-color: red;
+    }

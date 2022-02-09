@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+<style>
+    .flex {
+        display: flex;
+        flex-direction: column;
+        width: 180px;
+        height: 180px;
+        box-shadow: rgba(17, 211, 78, 0.253);
+        border: black 1px solid;
+    }
+    
+    .flex>div:first-child>div {
+        background-color: yellow;
+    }
+    
+    .flex>div:nth-child(2)>div {
+        background-color: green;
+    }
+    
+    .flex>div:last-child>div {
+        background-color: red;
+    }
+    
+    .flex>div {
+        display: flex;
+    }
+    
+    .flex>div>div {
+        width: 60xp;
+        height: 60px;
+        border: black 1px solid;
+        flex-grow: 1;
+    }
+    
+    .flex>div>div:hover {
+        background-color: blue;
+        transition: 0.5s;
+    }
+</style>
+
+<body>
+    <div class="flex">
+
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
