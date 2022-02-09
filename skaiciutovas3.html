@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        display: grid;
+        gap: 5px;
+        height: 600px;
+        width: 400px;
+        border: 1px rgb(12, 3, 3) solid;
+        background-color: white;
+        margin: auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: (6, 1fr);
+        border-radius: 20px;
+        padding: 10px;
+    }
+    
+    .display {
+        grid-row: span 2;
+        grid-column: span 4;
+        background-color: black !important;
+        font-size: large;
+    }
+    
+    .main>div {
+        background-color: blue;
+        display: grid;
+        place-items: center;
+        border-radius: 5px;
+    }
+    
+    .null {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .function {
+        background-color: rgb(39, 2, 2) !important;
+    }
+    
+    .main>div:hover {
+        background-color: rgb(16, 55, 88);
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="display">12345678</div>
+        <div>C</div>
+        <div>-/+</div>
+        <div>%</div>
+        <div class="function">/</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div class="function">*</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div class="function">-</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div class="function">+</div>
+        <div class="null">0</div>
+        <div>,</div>
+        <div class="function">=</div>
+
+
+
+    </div>
+
+</body>
+
+</html>
