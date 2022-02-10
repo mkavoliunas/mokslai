@@ -7,6 +7,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<script>
+    var firstChoice = -1;
+    var isPlusClick = false;
+    var secondChoise = -1;
+    var isMinusClick = false;
+    var isMulltiplicationClick = false;
+    var isDivisionClick = false;
+    var isAllClearClick = false;
+
+
+    function skaicius(choice) {
+        if (firstChoice == -1) {
+            firstChoice = choice;
+            console.log(choice);
+            document.getElementById("display").innerHTML = firstChoice;
+
+        } else if ((isPlusClick || isMinusClick || isMulltiplicationClick || isDivisionClick) && secondChoise == -1) {
+            secondChoise = choice;
+            console.log(choice);
+            document.getElementById("display").innerHTML = secondChoise;
+        }
+
+
+    }
+
+    function plusSightClicked() {
+        isPlusClick = true;
+        console.log("plus");
+    }
+
+    function minusSigthCliked() {
+        isMinusClick = true;
+        console.log("minus");
+    }
+
+    function MulltiplicationClicke() {
+        isMulltiplicationClick = true;
+        console.log("daugyba");
+    }
+
+    function divisionClicke() {
+        isDivisionClick = true;
+        console.log("dalyba")
+    }
+
+    function AllClearClick() {
+        if (AllClearClick !== "") {
+            isAllClearClick = "";
+            isAllClearClick.innerHTML = 0;
+        }
+
+
+        function equalSigthClicke() {
+            if (firstChoice != -1 && secondChoise != -1) {
+                if (isPlusClick) {
+                    document.getElementById("display").innerHTML = firstChoice + secondChoise;
+                    console.log(firstChoice + secondChoise);
+                    Reset();
+                } else if (isMinusClick) {
+                    document.getElementById("display").innerHTML = firstChoice - secondChoise;
+                    console.log(firstChoice - secondChoise);
+                    Reset();
+                } else if (isMulltiplicationClick) {
+                    document.getElementById("display").innerHTML = firstChoice * secondChoise;
+                    console.log(firstChoice * secondChoise);
+                    Reset();
+                } else if (isDivisionClick) {
+                    document.getElementById("display").innerHTML = firstChoice / secondChoise;
+                    console.log(firstChoice / secondChoise);
+                    Reset();
+                }
+            }
+        }
+
+        function Reset() {
+            firstChoice = -1;
+            isPlusClick = false;
+            secondChoise = -1;
+            isMinusClick = false;
+            isMulltiplicationClick = false;
+            isAllClearClick = false;
+        }
+</script>
 <style>
     .main {
         display: grid;
@@ -22,10 +106,10 @@
         padding: 10px;
     }
     
-    .display {
+    #display {
         grid-row: span 2;
         grid-column: span 4;
-        background-color: black !important;
+        background-color: white !important;
         font-size: large;
     }
     
@@ -42,7 +126,7 @@
     }
     
     .function {
-        background-color: rgb(39, 2, 2) !important;
+        background-color: rgb(68, 11, 11) !important;
     }
     
     .main>div:hover {
@@ -52,26 +136,26 @@
 
 <body>
     <div class="main">
-        <div class="display">12345678</div>
-        <div>C</div>
+        <div id="display"></div>
+        <div onclick="AllClearClick()" id="C"></div>
         <div>-/+</div>
         <div>%</div>
-        <div class="function">/</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div class="function">*</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div class="function">-</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div class="function">+</div>
-        <div class="null">0</div>
+        <div onclick="divisionClicke()" id="dalyba">/</div>
+        <div onclick="skaicius(7)">7</div>
+        <div onclick="skaicius(8)">8</div>
+        <div onclick="skaicius(9)">9</div>
+        <div onclick="MulltiplicationClicke()" id="daugyba">*</div>
+        <div onclick="skaicius(4) ">4</div>
+        <div onclick="skaicius(5) ">5</div>
+        <div onclick="skaicius(6) ">6</div>
+        <div onclick="minusSigthCliked()" id="minus">-</div>
+        <div onclick="skaicius(1) ">1</div>
+        <div onclick="skaicius(2) ">2</div>
+        <div onclick="skaicius(3) ">3</div>
+        <div onclick="plusSightClicked()" id="plus">+</div>
+        <div class="null ">0</div>
         <div>,</div>
-        <div class="function">=</div>
+        <div onclick="equalSigthClicke()" id="equal-sign">=</div>
 
 
 
