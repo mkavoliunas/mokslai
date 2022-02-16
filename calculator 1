@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="calculator-styles.css">
+    <script src="calculator.js"></script>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="mainFrame">
+        <div id="answerBox">
+            <div id="actionField">0</div>
+        </div>
+        <div class="functionLine">
+            <div id="buttonC" onclick="pressC()">C</div>
+            <div id="buttonPlusMinus" onclick="plusMinus()">+/-</div>
+            <div id="buttonPercentage" onclick='percentage()'>%</div>
+            <div id="buttonDivide" onclick='actionButtonPressed("division")'>÷</div>
+        </div>
+        <div class="lineOfNumbers1">
+            <div id="button7" value="7" onclick="pressNumber(7)">7</div>
+            <div id="button8" value="8" onclick="pressNumber(8)">8</div>
+            <div id="button9" value="9" onclick="pressNumber(9)">9</div>
+            <div id="buttonMultiply" onclick='actionButtonPressed("multiplication")'>×</div>
+        </div>
+        <div class="lineOfNumbers2">
+            <div id="button4" value="4" onclick="pressNumber(4)">4</div>
+            <div id="button5" value="5" onclick="pressNumber(5)">5</div>
+            <div id="button6" value="6" onclick="pressNumber(6)">6</div>
+            <div id="buttonMinus" onclick='actionButtonPressed("subtraction")'>−</div>
+        </div>
+        <div class="lineOfNumbers3">
+            <div id="button1" value="1" onclick="pressNumber(1)">1</div>
+            <div id="button2" value="2" onclick="pressNumber(2)">2</div>
+            <div id="button3" value="3" onclick="pressNumber(3)">3</div>
+            <div id="buttonPlus" onclick='actionButtonPressed("addition")'>+</div>
+        </div>
+        <div class="lineOfNumbers4">
+            <div id="button0" value="0" onclick="pressNumber(0)">0</div>
+            <div id="buttonComma" value="." onclick="pressComma()">.</div>
+            <div id="buttonEqual" onclick="equal()">=</div>
+        </div>
+    </div>
+</body>
+
+</html>
