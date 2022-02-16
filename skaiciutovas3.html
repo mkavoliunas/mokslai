@@ -7,6 +7,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<script>
+    var firstChoice = "";
+    var isPlusClick = false;
+    var secondChoise = "";
+    var isMinusClick = false;
+    var isMulltiplicationClick = false;
+    var isDivisionClick = false;
+
+
+
+
+
+
+    function skaicius(choice) {
+        if (!isPlusClick && !isMinusClick && !isMulltiplicationClick && !isDivisionClick) {
+            firstChoice += choice.toString();
+            console.log(firstChoice);
+            document.getElementById("display").innerHTML = firstChoice;
+
+
+        } else if ((isPlusClick || isMinusClick || isMulltiplicationClick || isDivisionClick)) {
+            secondChoise += choice.toString();
+            console.log(secondChoise);
+            document.getElementById("display").innerHTML = secondChoise;
+        }
+
+
+    }
+
+    function plusMinus() {
+        if (!isPlusClick && !isMinusClick && !isMulltiplicationClick && !isDivisionClick) {
+            firstChoice = parseFloat(firstChoice) * -1;
+            document.getElementById("display").innerHTML = firstChoice;
+        } else if ((isPlusClick || isMinusClick || isMulltiplicationClick || isDivisionClick)) {
+            secondChoise = parseFloat(secondChoise) * -1;
+            document.getElementById("display").innerHTML = secondChoise;
+        }
+    }
+
+    function percent() {
+        if (!isPlusClick && !isMinusClick && !isMulltiplicationClick && !isDivisionClick) {
+            firstChoice = parseFloat(firstChoice) * -1;
+            document.getElementById("display").innerHTML = firstChoice;
+
+        }
+
+
+        function plusSightClicked() {
+            isPlusClick = true;
+            console.log("plus");
+        }
+
+        function minusSigthCliked() {
+            isMinusClick = true;
+            console.log("minus");
+        }
+
+        function MulltiplicationClicke() {
+            isMulltiplicationClick = true;
+            console.log("daugyba");
+        }
+
+        function divisionClicke() {
+            isDivisionClick = true;
+            console.log("dalyba")
+        }
+
+
+        function allClearClick() {
+            document.getElementById("display").innerHTML = 0;
+            Reset();
+
+        }
+
+
+        function equalSigthClicke() {
+            if (firstChoice != -1 && secondChoise != -1) {
+                if (isPlusClick) {
+                    document.getElementById("display").innerHTML = parseFloat(firstChoice) + parseFloat(secondChoise);
+                    console.log(firstChoice + secondChoise);
+                    Reset();
+                } else if (isMinusClick) {
+                    document.getElementById("display").innerHTML = parseFloat(firstChoice) - parseFloat(secondChoise);
+                    console.log(firstChoice - secondChoise);
+                    Reset();
+                } else if (isMulltiplicationClick) {
+                    document.getElementById("display").innerHTML = parseFloat(firstChoice) * parseFloat(secondChoise);
+                    console.log(firstChoice * secondChoise);
+                    Reset();
+                } else if (isDivisionClick) {
+                    document.getElementById("display").innerHTML = parseFloat(firstChoice) / parseFloat(secondChoise);
+                    console.log(firstChoice / secondChoise);
+                    Reset();
+                }
+            }
+        }
+
+        function Reset() {
+            firstChoice = "";
+            isPlusClick = false;
+            secondChoise = "";
+            isMinusClick = false;
+            isMulltiplicationClick = false;
+            isallClearClick = false;
+
+
+        }
+</script>
 <style>
     .main {
         display: grid;
@@ -22,10 +131,10 @@
         padding: 10px;
     }
     
-    .display {
+    #display {
         grid-row: span 2;
         grid-column: span 4;
-        background-color: black !important;
+        background-color: white !important;
         font-size: large;
     }
     
@@ -42,7 +151,7 @@
     }
     
     .function {
-        background-color: rgb(39, 2, 2) !important;
+        background-color: rgb(68, 11, 11) !important;
     }
     
     .main>div:hover {
@@ -52,26 +161,26 @@
 
 <body>
     <div class="main">
-        <div class="display">12345678</div>
-        <div>C</div>
-        <div>-/+</div>
-        <div>%</div>
-        <div class="function">/</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div class="function">*</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div class="function">-</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div class="function">+</div>
-        <div class="null">0</div>
-        <div>,</div>
-        <div class="function">=</div>
+        <div id="display"></div>
+        <div onclick="allClearClick()" id="AC">AC</div>
+        <div onclick="plusMinus()">-/+</div>
+        <div onclick="percentClick()" id="percent">%</div>
+        <div onclick="divisionClicke()" id="dalyba">/</div>
+        <div onclick="skaicius(7)">7</div>
+        <div onclick="skaicius(8)">8</div>
+        <div onclick="skaicius(9)">9</div>
+        <div onclick="MulltiplicationClicke()" id="daugyba">*</div>
+        <div onclick="skaicius(4) ">4</div>
+        <div onclick="skaicius(5) ">5</div>
+        <div onclick="skaicius(6) ">6</div>
+        <div onclick="minusSigthCliked()" id="minus">-</div>
+        <div onclick="skaicius(1) ">1</div>
+        <div onclick="skaicius(2) ">2</div>
+        <div onclick="skaicius(3) ">3</div>
+        <div onclick="plusSightClicked()" id="plus">+</div>
+        <div onclick="skaicius(0)">0</div>
+        <div onclick="skaicius('.')">.</div>
+        <div onclick="equalSigthClicke()" id="equal-sign">=</div>
 
 
 
