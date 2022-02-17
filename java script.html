@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var Vardas;
+        var Pavarde;
+
+        function VardasClick() {
+            Vardas = "Matas";
+        }
+
+        function PavardeClick() {
+            Pavarde = "Kavoliunas";
+        }
+
+        function pilnasVardas(rodyti) {
+            console.log(Vardas + Pavarde);
+        }
+        pilnasVardas();
+    </script>
+</head>
+
+
+<body>
+
+    <div onclick="VardasClick()" style="background-color: rgb(10, 1, 1); width: 50px; height: 50px;"></div>
+    <div onclick="PavardeClick()" style="background-color: red; width: 50px; height: 50px;"></div>
+    <div onclick="pilnasVardas()" style="background-color: rgb(54, 179, 147); width: 50px; height: 50px;"></div>
+
+</body>
+
+</html>
