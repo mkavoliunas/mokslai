@@ -15,9 +15,7 @@
     var isMinusClick = false;
     var isMulltiplicationClick = false;
     var isDivisionClick = false;
-
-
-
+    var equal = "";
 
 
 
@@ -33,9 +31,8 @@
             console.log(secondChoise);
             document.getElementById("display").innerHTML = secondChoise;
         }
-
-
     }
+
 
     function plusMinus() {
         if (!isPlusClick && !isMinusClick && !isMulltiplicationClick && !isDivisionClick) {
@@ -47,74 +44,86 @@
         }
     }
 
-    function percent() {
+    function percentClick() {
         if (!isPlusClick && !isMinusClick && !isMulltiplicationClick && !isDivisionClick) {
-            firstChoice = parseFloat(firstChoice) * -1;
+            firstChoice = (firstChoice / 100).toString();
+            console.log(firstChoice);
             document.getElementById("display").innerHTML = firstChoice;
 
-        }
-
-
-        function plusSightClicked() {
-            isPlusClick = true;
-            console.log("plus");
-        }
-
-        function minusSigthCliked() {
-            isMinusClick = true;
-            console.log("minus");
-        }
-
-        function MulltiplicationClicke() {
-            isMulltiplicationClick = true;
-            console.log("daugyba");
-        }
-
-        function divisionClicke() {
-            isDivisionClick = true;
-            console.log("dalyba")
-        }
-
-
-        function allClearClick() {
-            document.getElementById("display").innerHTML = 0;
-            Reset();
+        } else if ((isPlusClick || isMinusClick || isMulltiplicationClick || isDivisionClick)) {
+            secondChoise = ((firstChoice / 100) * secondChoise).toString();
+            console.log(secondChoise);
+            document.getElementById("display").innerHTML = secondChoise;
 
         }
+    }
+
+    function plusSightClicked() {
+        isPlusClick = true;
+        console.log("plus");
+    }
+
+    function minusSigthCliked() {
+        isMinusClick = true;
+        console.log("minus");
+    }
+
+    function MulltiplicationClicke() {
+        isMulltiplicationClick = true;
+        console.log("daugyba");
+    }
+
+    function divisionClicke() {
+        isDivisionClick = true;
+        console.log("dalyba")
+    }
 
 
-        function equalSigthClicke() {
-            if (firstChoice != -1 && secondChoise != -1) {
-                if (isPlusClick) {
-                    document.getElementById("display").innerHTML = parseFloat(firstChoice) + parseFloat(secondChoise);
-                    console.log(firstChoice + secondChoise);
-                    Reset();
-                } else if (isMinusClick) {
-                    document.getElementById("display").innerHTML = parseFloat(firstChoice) - parseFloat(secondChoise);
-                    console.log(firstChoice - secondChoise);
-                    Reset();
-                } else if (isMulltiplicationClick) {
-                    document.getElementById("display").innerHTML = parseFloat(firstChoice) * parseFloat(secondChoise);
-                    console.log(firstChoice * secondChoise);
-                    Reset();
-                } else if (isDivisionClick) {
-                    document.getElementById("display").innerHTML = parseFloat(firstChoice) / parseFloat(secondChoise);
-                    console.log(firstChoice / secondChoise);
-                    Reset();
-                }
+    function allClearClick() {
+        document.getElementById("display").innerHTML = 0;
+        Reset();
+
+    }
+
+    function equalSigthClicke() {
+        if (firstChoice != -1 && secondChoise != -1) {
+            if (isPlusClick) {
+                document.getElementById("display").innerHTML = parseFloat(firstChoice) + parseFloat(secondChoise);
+                console.log(firstChoice + secondChoise);
+                Reset();
+            } else if (isMinusClick) {
+                document.getElementById("display").innerHTML = parseFloat(firstChoice) - parseFloat(secondChoise);
+                console.log(firstChoice - secondChoise);
+                Reset();
+            } else if (isMulltiplicationClick) {
+                document.getElementById("display").innerHTML = parseFloat(firstChoice) * parseFloat(secondChoise);
+                console.log(firstChoice * secondChoise);
+                Reset();
+            } else if (isDivisionClick) {
+                document.getElementById("display").innerHTML = parseFloat(firstChoice) / parseFloat(secondChoise);
+                console.log(firstChoice / secondChoise);
+                Reset();
             }
+
+
+        } else if (equal) {
+            document.getElementById("display").innerHTML = parseFloat(firstChoice) = parseFloat(secondChoise);
+            console.log(firstChoice = secondChoise)
         }
+    }
 
-        function Reset() {
-            firstChoice = "";
-            isPlusClick = false;
-            secondChoise = "";
-            isMinusClick = false;
-            isMulltiplicationClick = false;
-            isallClearClick = false;
+    function Reset() {
+        firstChoice = "";
+        isPlusClick = false;
+        secondChoise = "";
+        isMinusClick = false;
+        isMulltiplicationClick = false;
+        isallClearClick = false;
+        isDivisionClick = false;
 
 
-        }
+
+    }
 </script>
 <style>
     .main {
