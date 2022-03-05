@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // function CountPromotion(YourExperiance, timeYouWorkedHere, productivityKof, Degree, Salary) {
+
+        //     var CountPromotion = (Salary * productivityKof) * Degree + YourExperiance * timeYouWorkedHere;
+
+        //     return CountPromotion;
+
+
+
+
+        // }
+        // CountPromotion
+        // console.log(CountPromotion(10, 2, 2, 1, 1000));
+
+        // function AlgosKelimas(stazas, laikasImoneje, produktyvumas, pelnas, alga, metai) {
+        //     var procentas = 0;
+        //     var naujaAlga;
+
+        //     if (produktyvumas <= 5 && pelnas === false) {
+        //         procentas = (((stazas + laikasImoneje) * 0.2) + (produktyvumas * 0) + 0);
+        //     } else if (produktyvumas > 5 && pelnas === false) {
+        //         procentas = (((stazas + laikasImoneje) * 0.2) + (produktyvumas * 0.4) + 0);
+        //     } else if (produktyvumas <= 5 && pelnas === true) {
+        //         procentas = (((stazas + laikasImoneje) * 0.2) + (produktyvumas * 0) + 4);
+        //     } else if (produktyvumas > 5 && pelnas === true) {
+        //         procentas = (((stazas + laikasImoneje) * 0.2) + (produktyvumas * 0.4) + 4);
+        //     }
+        //     naujaAlga = (alga + alga * (procentas / 100));
+
+        //     console.log('Naujas Atlygis :' + naujaAlga.toFixed(2) + "Eur." + "\n" + "Algos pokytis :" + procentas.toFixed(2) + '%.');
+
+        //     if (metai > 0) {
+        //         return AlgosKelimas(++stazas, ++laikasImoneje, produktyvumas, pelnas, alga, --metai);
+        //     }
+        //     return naujaAlga;
+        // }
+        // AlgosKelimas(5, 3, 10, true, 1000, 5);
+
+        // KOVO 03
+
+        // function GetRandom() {
+        //     var proc = Math.floor(Math.random() * 100);
+
+        //     if (proc > 0 && proc < 76) {
+        //         return 'Windows'
+        //     } else if (proc < 84) {
+        //         return 'ChromeOs'
+        //     } else if (proc < 91) {
+        //         return 'MacOs'
+        //     } else if (proc < 100) {
+        //         return 'Linux'
+        //     }
+
+        // }
+
+        // function RandomessCounter(n) {
+
+        //     var WinCounter = 0;
+        //     var MacCounter = 0;
+        //     var LinCounter = 0;
+        //     var ChrCounter = 0;
+
+        //     for (var i = 0; i < n; i++) {
+        //         var result = GetRandom();
+        //         switch (result) {
+        //             case 'Windows':
+        //                 WinCounter++;
+        //                 break;
+        //             case 'MacOs':
+        //                 MacCounter++;
+        //                 break;
+        //             case 'Linux':
+        //                 LinCounter++;
+        //                 break;
+        //             case 'ChromeOS':
+        //                 ChrCounter++;
+        //                 break;
+        //         }
+        //     }
+        //     console.log('Windows: ${Wincounter} \n MacOs: ${MacCounter} \n Linux: ${LinCounter} \n ChromeOs: ${ChrCounter}');
+
+        // }
+
+        // RandomessCounter(10);
+        // RandomessCounter(100);
+        // RandomessCounter(10000);
+        // RandomessCounter(100000);
+
+        // var tavoAmzius = 0;
+        // var tavovardas;
+
+        // while (tavoAmzius <= 0 || tavoAmzius > 100 || isNaN(tavoAmzius)) {
+
+        //     tavoAmzius = prompt('Kiek Jums metu');
+        //     tavoAmzius = parseInt(tavoAmzius);
+        // }
+
+        // while (tavovardas != 'Matas') {
+
+        //     tavovardas = prompt('Koks Jusu vardas');
+        //     tavovardas = toString(tavovardas);
+
+        // }
+        // console.log(tavovardas);
+        // console.log(tavoAmzius);
+
+
+        // var nameList = ['Nina', 'Ozzie', 'Queenie', 'Pokey', 'Cubs', 'Wags', 'Ellie', 'Nibbles', 'Paris', 'Scarlett', 'Harpo', 'Chyna',
+        //     'Lexi', 'Kibbles', 'Susie', 'Rex', 'Blackjack', 'Snoop', 'Pumpkin', 'Ryder', 'Kirby', 'Sassy', 'Niki', 'Eddie', 'Latte',
+        //     'Buffy', 'Brittany', 'Buddie', 'Rambo', 'Scooby-doo', 'Tango', 'Snuffles', 'Felix', 'Rosy', 'BJ', 'Zippy', 'Lynx', 'Bongo',
+        //     'Buzzy', 'Chrissy', 'Justice', 'Rebel', 'Billy', 'Audi', 'Ranger', 'Puddles', 'Susie Q', 'Gator', 'Persy', 'Clancy', 'Madison',
+        //     'Waldo', 'Jingles', 'Baron', 'Raison', 'Jolly', 'Jester', 'Cherokee', 'Sammy', 'Zoie', 'Ruger', 'Jenna', 'Jolie', 'Speed',
+        //     'Kane', 'Sunny', 'Isabelle', 'Jess', 'Dandy', 'Bug', 'Nona', 'Porter', 'Trooper', 'Darwin', 'Babbles', 'Boo-boo',
+        //     'Cupcake', 'Gromit', 'Sadie', 'Angel', 'Kona', 'Tangles', 'Toffee', 'Morgan', 'Barney', 'Troy', 'Silver', 'Mini',
+        //     'Austin', 'Yin', 'Doodles', 'Jamie', 'Georgie', 'Woofie', 'Dodger', 'Slinky', 'Flake', 'Atlas', 'Phoenix', 'Beaux'
+        // ];
+
+        // function firsArrayTask() {
+        //     var reverseNameList = [];
+        //     var lenghtOfArray = nameList.length - 1;
+
+        //     for (var i = lenghtOfArray; i >= 0; i--) {
+        //         reverseNameList[i] = nameList[lenghtOfArray - i];
+        //     }
+
+        //     console.log(nameList);
+        //     console.log(reverseNameList);
+        // }
+        // firsArrayTask;
+
+        // function antraUzduotis(vardai) {
+        //     var nameList = ['Nina', 'Ozzie', 'Queenie', 'Pokey', 'Cubs', 'Wags', 'Ellie', 'Nibbles', 'Paris', 'Scarlett', 'Harpo', 'Chyna',
+        //         'Lexi', 'Kibbles', 'Susie', 'Rex', 'Blackjack', 'Snoop', 'Pumpkin', 'Ryder', 'Kirby', 'Sassy', 'Niki', 'Eddie', 'Latte',
+        //         'Buffy', 'Brittany', 'Buddie', 'Rambo', 'Scooby-doo', 'Tango', 'Snuffles', 'Felix', 'Rosy', 'BJ', 'Zippy', 'Lynx', 'Bongo',
+        //         'Buzzy', 'Chrissy', 'Justice', 'Rebel', 'Billy', 'Audi', 'Ranger', 'Puddles', 'Susie Q', 'Gator', 'Persy', 'Clancy', 'Madison',
+        //         'Waldo', 'Jingles', 'Baron', 'Raison', 'Jolly', 'Jester', 'Cherokee', 'Sammy', 'Zoie', 'Ruger', 'Jenna', 'Jolie', 'Speed',
+        //         'Kane', 'Sunny', 'Isabelle', 'Jess', 'Dandy', 'Bug', 'Nona', 'Porter', 'Trooper', 'Darwin', 'Babbles', 'Boo-boo',
+        //         'Cupcake', 'Gromit', 'Sadie', 'Angel', 'Kona', 'Tangles', 'Toffee', 'Morgan', 'Barney', 'Troy', 'Silver', 'Mini',
+        //         'Austin', 'Yin', 'Doodles', 'Jamie', 'Georgie', 'Woofie', 'Dodger', 'Slinky', 'Flake', 'Atlas', 'Phoenix', 'Beaux'
+        //     ];
+        //     if (nameList.length(vardai)) {
+        //         console.log("Taip !")
+        //     } else {
+        //         console.log('Ne')
+        //     }
+
+        // }
+        // console.log(nameList);
+        // antraUzduotis;
+
+        // function vardoilgis() {
+        //     var nameList = ['Nina', 'Ozzie', 'Queenie', 'Pokey', 'Cubs', 'Wags', 'Ellie', 'Nibbles', 'Paris', 'Scarlett', 'Harpo', 'Chyna',
+        //         'Lexi', 'Kibbles', 'Susie', 'Rex', 'Blackjack', 'Snoop', 'Pumpkin', 'Ryder', 'Kirby', 'Sassy', 'Niki', 'Eddie', 'Latte',
+        //         'Buffy', 'Brittany', 'Buddie', 'Rambo', 'Scooby-doo', 'Tango', 'Snuffles', 'Felix', 'Rosy', 'BJ', 'Zippy', 'Lynx', 'Bongo',
+        //         'Buzzy', 'Chrissy', 'Justice', 'Rebel', 'Billy', 'Audi', 'Ranger', 'Puddles', 'Susie Q', 'Gator', 'Persy', 'Clancy', 'Madison',
+        //         'Waldo', 'Jingles', 'Baron', 'Raison', 'Jolly', 'Jester', 'Cherokee', 'Sammy', 'Zoie', 'Ruger', 'Jenna', 'Jolie', 'Speed',
+        //         'Kane', 'Sunny', 'Isabelle', 'Jess', 'Dandy', 'Bug', 'Nona', 'Porter', 'Trooper', 'Darwin', 'Babbles', 'Boo-boo',
+        //         'Cupcake', 'Gromit', 'Sadie', 'Angel', 'Kona', 'Tangles', 'Toffee', 'Morgan', 'Barney', 'Troy', 'Silver', 'Mini',
+        //         'Austin', 'Yin', 'Doodles', 'Jamie', 'Georgie', 'Woofie', 'Dodger', 'Slinky', 'Flake', 'Atlas', 'Phoenix', 'Beaux'
+        //     ];
+        //     var isrusiuotivardai = [];
+
+        //     for (i = 0; i < nameList; i++) {
+        //         if (nameList.length >= 6) {
+        //             isrusiuotivardai.push(nameList);
+        //             console.log(isrusiuotivardai);
+        //         }
+        //     }
+        // }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
