@@ -6,206 +6,241 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>array</title>
-    <script>
-        // var sarasas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-        //     11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-        //     21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
-        //     31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
-        //     41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
-        //     51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
-        //     61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
-        //     71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
-        //     81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-        //     91, 92, 93, 94, 95, 96, 97, 98, 99, 100
-        // ]
 
-        // for (var i = 0; i < 99; i++) {
-        //     console.log(i + sarasas[i]);
-        // }
+    <head>
+        <script>
+            // var sarasas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            //     11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+            //     21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+            //     31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+            //     41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
+            //     51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
+            //     61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
+            //     71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+            //     81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
+            //     91, 92, 93, 94, 95, 96, 97, 98, 99, 100
+            // ]
 
-        // var sarasas = [];
+            // for (var i = 0; i < 99; i++) {
+            //     console.log(i + sarasas[i]);
+            // }
 
-        // for (var i = 0; i < 100; i++) {
-        //     sarasas[i] = i + 1;
-        // }
-        // sarasas.forEach(element => {
-        //     console.log(element);
-        // })
+            // var sarasas = [];
 
-
-        // var mainArray = []
-
-        // for (var i = 0; i < 10; i++) {
-        //     var secondArray = [];
-        //     for (var x = 0; x < ((i + 1) * 10); x++) {
-        //         secondArray[x] = x;
-        //     }
-        //     mainArray[i] = secondArray;
-
-        // }
-        // console.log(mainArray);
-
-        // var sarasas = [1, 2, 3, 4, 5, 6, 7, "tekstas", 8, 9, 10]
-
-        // for (var i = 0; i < 100; i++) {
-        //     sarasas[i] = i;
-
-        // }
-        // console.log(i + ":" + sarasas);
-
-        // function kelimasLaipsniu(2, *2) {
-        //     var atsakymas = skaicius;
-        //     for (var i = 1; i < laipsnis; i++) {
-        //         atsakymas *= atsakymas
-        //     }
-        //     return atsakymas;
-        //     console.log(kelimasLaipsniu);
-        // }
-
-        // function FindPrimes(howManu) {
-        //     var count = 0;
-        //     var number = 1;
-        //     var PrimeArray = [];
-
-        //     while (count < howMany) {
-
-        //         number++;
-
-        //         var isPrime = true;
+            // for (var i = 0; i < 100; i++) {
+            //     sarasas[i] = i + 1;
+            // }
+            // sarasas.forEach(element => {
+            //     console.log(element);
+            // })
 
 
-        //         for (var i = 2; i < number; i++) {
+            // var mainArray = []
 
-        //             if ((number % i) == 0) {
-        //                 isprime = false;
-        //                 break;
-        //             }
-        //         }
-        //     }
-        //     if (isPrime) {
-        //         PrimeArray[count] = number;
-        //         count++;
-        //     }
-        //     return PrimeArray;
-        // }
+            // for (var i = 0; i < 10; i++) {
+            //     var secondArray = [];
+            //     for (var x = 0; x < ((i + 1) * 10); x++) {
+            //         secondArray[x] = x;
+            //     }
+            //     mainArray[i] = secondArray;
 
+            // }
+            // console.log(mainArray);
 
-        // FindPrimes(10000);
-        // FindPrimes(10000);
-        // FindPrimes(10000);
-        // FindPrimes(10000);
+            // var sarasas = [1, 2, 3, 4, 5, 6, 7, "tekstas", 8, 9, 10]
 
-        // pirma uzduotis
+            // for (var i = 0; i < 100; i++) {
+            //     sarasas[i] = i;
 
-        // var megstamiausi = ["pienas", "duona", "kruopos", "zuvis", "bulve", "morka", "kopustas", "blynas", "kumpis", "vista"]
-        // var nemegstamiausi = ["dulkes", "karstis", "darbas", "pastetas", "kepenis", "lietus", "saltis", "ziema", "raveti", "burokas"]
+            // }
+            // console.log(i + ":" + sarasas);
 
-        // megstamiausi.forEach(megstu => {
-        //     nemegstamiausi.forEach(nemegstu => {
-        //         console.log(megstu + " " + nemegstu);
-        //     });
-        // });
-
-        // antra uzduotis
-
-        var megstamiausi = ["pienas", "duona", "kruopos", "zuvis", "bulve", "morka", "kopustas", "blynas", "kumpis", "vista"]
-        var nemegstamiausi = ["dulkes", "karstis", "darbas", "pastetas", "kepenis", "lietus", "saltis", "ziema", "raveti", "burokas"]
-        for (var i = 0; i < 10; i++) {
-            for (var x = 0; x < 10; x++) {
-                console.log(megstamiausi[i] + " " + nemegstamiausi[x]);
+            function kelimasLaipsniu(2, * 2) {
+                var atsakymas = skaicius;
+                for (var i = 1; i < laipsnis; i++) {
+                    atsakymas *= atsakymas
+                }
+                return atsakymas;
+                console.log(kelimasLaipsniu);
             }
-            console.log(i + " " + megstamiausi, nemegstamiausi);
-        }
 
-        // trecia uzduotis
+            // function FindPrimes(howManu) {
+            //     var count = 0;
+            //     var number = 1;
+            //     var PrimeArray = [];
 
-        // var megstamiausi = ["pienas", "duona", "kruopos", "zuvis", "bulve", "morka", "kopustas", "blynas", "kumpis", "vista"];
-        // var nemegstamiausi = ["dulkes", "karstis", "darbas", "pastetas", "kepenis", "lietus", "saltis", "ziema", "raveti", "burokas"];
-        // var kintamasis = [];
-        // for (var i = 0; i < megstamiausi.length; i++) {
-        //     for (var x = 0; x < nemegstamiausi.length; x++) {
-        //         if (i != x) {
-        //             kintamasis.push(megstamiausi[i] + " " + megstamiausi[x]);
-        //             kintamasis.push(nemegstamiausi[i] + " " + nemegstamiausi[x]);
-        //         }
-        //         kintamasis.push(nemegstamiausi[i] + " " + megstamiausi[x]);
-        //         kintamasis.push(megstamiausi[x] + " " + megstamiausi[i]);
-        //     }
+            //     while (count < howMany) {
 
-        // }
-        // console.log(kintamasis);
+            //         number++;
+
+            //         var isPrime = true;
 
 
-        // var megstamiausi = ["pienas", "duona", "kruopos", "zuvis", "bulve", "morka", "kopustas", "blynas", "kumpis", "vista"]
-        // var nemegstamiausi = ["dulkes", "karstis", "darbas", "pastetas", "kepenis", "lietus", "saltis", "ziema", "raveti", "burokas"]
-        // var kintamasis = [];
-        // var x = 0;
+            //         for (var i = 2; i < number; i++) {
 
-        // megstamiausi.forEach(i => {
-        //     nemegstamiausi.forEach(n => {
-        //         // console.log(i, n);
-        //         kintamasis[x] = i + " " + n;
-        //         x++;
-        //         kintamasis[x] = n + " " + i;
-        //         x++;
-        //     })
-        // });
-        // megstamiausi.forEach(i => {
-        //     var pirmas = i;
-        //     megstamiausi.forEach(i => {
-        //         if (pirmas != i) {
-        //             // confirm.log(pirmas.i);
-        //             kintamasis[x] = pirmas + " " + i;
-        //             x++;
-        //         }
-        //     })
-        // });
+            //             if ((number % i) == 0) {
+            //                 isprime = false;
+            //                 break;
+            //             }
+            //         }
+            //     }
+            //     if (isPrime) {
+            //         PrimeArray[count] = number;
+            //         count++;
+            //     }
+            //     return PrimeArray;
+            // }
 
-        // nemegstamiausi.forEach(i => {
-        //     var pirmas = i;
-        //     nemegstamiausi.forEach(i => {
-        //         if (pirmas != i) {
-        //             // console.log(pirmas, i);
-        //             kintamasis[x] = pirmas + " " + i;
-        //             x++;
-        //         }
-        //     })
 
-        // });
-        // // kintamasis.forEach(i => {
-        // //     console.log(i);
-        // // })
+            // FindPrimes(10000);
+            // FindPrimes(10000);
+            // FindPrimes(10000);
+            // FindPrimes(10000);
 
-        // console.log(kintamasis);
+            // pirma uzduotis
 
-        // ketvirta uzduotis
+            // var megstamiausi = ["pienas", "duona", "kruopos", "zuvis", "bulve", "morka", "kopustas", "blynas", "kumpis", "vista"]
+            // var nemegstamiausi = ["dulkes", "karstis", "darbas", "pastetas", "kepenis", "lietus", "saltis", "ziema", "raveti", "burokas"]
 
-        // var megstamiausi = ["pienas", "duona", "kruopos", "zuvis", "bulve", "morka", "kopustas", "blynas", "kumpis", "vista"]
-        // var nemegstamiausi = ["dulkes", "karstis", "darbas", "pastetas", "kepenis", "lietus", "saltis", "ziema", "raveti", "burokas"]
-        // var sarasas = [];
-        // var sarasoElementas = 0;
-        //  for (var i = 0;
-        //  i < megstamiausi.length;
-        //   i++) {
-        //     for (var x = 0; x < nemegstamiausi.length; x++) {
-        //         if (i != x) {
-        //             kintamasis.push(megstamiausi[i] + " " + megstamiausi[x]);
-        //             kintamasis.push(nemegstamiausi[i] + " " + nemegstamiausi[x]);
-        //         }
-        //         kintamasis.push(nemegstamiausi[i] + " " + megstamiausi[x]);
-        //         kintamasis.push(megstamiausi[x] + " " + megstamiausi[i]);
-        //     }
+            // megstamiausi.forEach(megstu => {
+            //     nemegstamiausi.forEach(nemegstu => {
+            //         console.log(megstu + " " + nemegstu);
+            //     });
+            // });
 
-        // }
-        // sarasas.forEach(sarasoElementas => {
-        //     console.log((x += 1) + " " + sarasoElementas)
-        // })
-    </script>
+            // antra uzduotis
 
-</head>
+            // var megstamiausi = ["pienas", "duona", "kruopos", "zuvis", "bulve", "morka", "kopustas", "blynas", "kumpis", "vista"]
+            // var nemegstamiausi = ["dulkes", "karstis", "darbas", "pastetas", "kepenis", "lietus", "saltis", "ziema", "raveti", "burokas"]
 
-<body>
+            // for (var i = 0; i < 10; i++) {
+            //     for (var x = 0; x < 10; x++) {
+            //         console.log(megstamiausi[i] + " " + nemegstamiausi[x]);
+            //     }
+            //     console.log(i + " " + megstamiausi, nemegstamiausi);
+            // }
 
-</body>
+            // trecia uzduotis
 
-</html>
+            // var megstamiausi = ["pienas", "duona", "kruopos", "zuvis", "bulve", "morka", "kopustas", "blynas", "kumpis", "vista"];
+            // var nemegstamiausi = ["dulkes", "karstis", "darbas", "pastetas", "kepenis", "lietus", "saltis", "ziema", "raveti", "burokas"];
+            // var kintamasis = [];
+            // for (var i = 0; i < megstamiausi.length; i++) {
+            //     for (var x = 0; x < nemegstamiausi.length; x++) {
+            //         if (i != x) {
+            //             kintamasis.push(megstamiausi[i] + " " + megstamiausi[x]);
+            //             kintamasis.push(nemegstamiausi[i] + " " + nemegstamiausi[x]);
+            //         }
+            //         kintamasis.push(nemegstamiausi[i] + " " + megstamiausi[x]);
+            //         kintamasis.push(megstamiausi[x] + " " + megstamiausi[i]);
+            //     }
+
+            // }
+            // console.log(kintamasis);
+
+
+            // var megstamiausi = ["pienas", "duona", "kruopos", "zuvis", "bulve", "morka", "kopustas", "blynas", "kumpis", "vista"]
+            // var nemegstamiausi = ["dulkes", "karstis", "darbas", "pastetas", "kepenis", "lietus", "saltis", "ziema", "raveti", "burokas"]
+            // var kintamasis = [];
+            // var x = 0;
+
+            // megstamiausi.forEach(i => {
+            //     nemegstamiausi.forEach(n => {
+            //         // console.log(i, n);
+            //         kintamasis[x] = i + " " + n;
+            //         x++;
+            //         kintamasis[x] = n + " " + i;
+            //         x++;
+            //     })
+            // });
+            // megstamiausi.forEach(i => {
+            //     var pirmas = i;
+            //     megstamiausi.forEach(i => {
+            //         if (pirmas != i) {
+            //             // confirm.log(pirmas.i);
+            //             kintamasis[x] = pirmas + " " + i;
+            //             x++;
+            //         }
+            //     })
+            // });
+
+            // nemegstamiausi.forEach(i => {
+            //     var pirmas = i;
+            //     nemegstamiausi.forEach(i => {
+            //         if (pirmas != i) {
+            //             // console.log(pirmas, i);
+            //             kintamasis[x] = pirmas + " " + i;
+            //             x++;
+            //         }
+            //     })
+
+            // });
+            // // kintamasis.forEach(i => {
+            // //     console.log(i);
+            // // })
+
+            // console.log(kintamasis);
+
+            // ketvirta uzduotis
+
+            // var megstamiausi = ["pienas", "duona", "kruopos", "zuvis", "bulve", "morka", "kopustas", "blynas", "kumpis", "vista"]
+            // var nemegstamiausi = ["dulkes", "karstis", "darbas", "pastetas", "kepenis", "lietus", "saltis", "ziema", "raveti", "burokas"]
+            // var sarasas = [];
+            // var sarasoElementas = 0;
+            //  for (var i = 0;
+            //  i < megstamiausi.length;
+            //   i++) {
+            //     for (var x = 0; x < nemegstamiausi.length; x++) {
+            //         if (i != x) {
+            //             kintamasis.push(megstamiausi[i] + " " + megstamiausi[x]);
+            //             kintamasis.push(nemegstamiausi[i] + " " + nemegstamiausi[x]);
+            //         }
+            //         kintamasis.push(nemegstamiausi[i] + " " + megstamiausi[x]);
+            //         kintamasis.push(megstamiausi[x] + " " + megstamiausi[i]);
+            //     }
+
+            // }
+            // sarasas.forEach(sarasoElementas => {
+            //     console.log((x += 1) + " " + sarasoElementas)
+            // })
+
+            // function addUp(num) {
+            //     var = 0;
+            //     for (var i = 0; i < num; i++) {
+            //         sum += i;
+            //     }
+            //     return;
+            // }
+
+            // function binary(decimal) {
+            //     var quotient;
+            //     var remainder;
+            //     var binary;
+            //     while (quotient = decimal / 2) > 0) {
+            //     remainder = decimal % 2;
+            //     binary += remainder.toString();
+            //     decimal = parseFloat(quotient);
+            // }
+            // binary = binary.split('').reverse() / join('');
+            // console.log(binary);
+            // }
+            // binary(10);
+
+
+
+
+
+
+
+            <
+            / head>
+
+            <
+            body >
+
+                <
+                /body>
+
+
+            <
+            /html>

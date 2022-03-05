@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var skaiciuMasyvas2D = [
+            [1, 6, 3, 7],
+            [9, 6, 9, 3],
+            [5, 6, 9]
+        ]
+
+        function counter(arr) {
+            var counteris = 0;
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr[i].length; j++) {
+                    counteris++;
+                    console.log(arr[i][j]);
+
+                }
+            }
+            return counteris;
+        }
+
+        function print(arr, n) {
+            var count = 0;
+            for (var i = 0; i < arr.length; i++)
+                console.log(arr[i], [n])
+        }
+
+        print(skaiciuMasyvas2D[2]);
+        console.log('ciklo iteraciju skaicius: ' + counter(skaiciuMasyvas2D));
+
+        var car3 = {
+            marke: 'Audi',
+            modelis: 'a3',
+            spalva: 'Juoda'
+        }
+
+        console.log(car3.marke);
+    </script>
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
