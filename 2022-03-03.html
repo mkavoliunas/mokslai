@@ -8,40 +8,326 @@
     <title>Document</title>
 
     <script>
-        var skaiciuMasyvas2D = [
-            [1, 6, 3, 7],
-            [9, 6, 9, 3],
-            [5, 6, 9]
-        ]
+        //Suskaiciuoti kiek "Iteraciju" ciklas padare (kiek kartu cicklas prasisuko)
 
-        function counter(arr) {
-            var counteris = 0;
-            for (var i = 0; i < arr.length; i++) {
-                for (var j = 0; j < arr[i].length; j++) {
-                    counteris++;
-                    console.log(arr[i][j]);
+        // var skaiciuMasyvas2D = [
+        //     [1, 6, 3, 7],
+        //     [9, 6, 9, 3],
+        //     [5, 6, 9]
+        // ]
 
-                }
-            }
-            return counteris;
+        // function counter(arr) {
+        //     var counteris = 0;
+        //     for (var i = 0; i < arr.length; i++) {
+        //         for (var j = 0; j < arr[i].length; j++) {
+        //             counteris++;
+        //             console.log(arr[i][j]);
+
+        //         }
+        //     }
+        //     return counteris;
+        // }
+
+        // function print(arr, n) {
+        //     var count = 0;
+        //     for (var i = 0; i < arr.length; i++)
+        //         console.log(arr[i], [n])
+        // }
+
+        // print(skaiciuMasyvas2D[2]);
+        // console.log('ciklo iteraciju skaicius: ' + counter(skaiciuMasyvas2D));
+
+        // var car3 = {
+        //     marke: 'Audi',
+        //     modelis: 'a3',
+        //     spalva: 'Juoda'
+        // }
+
+        // console.log(car3.marke);
+
+        // 3. uzduotis susikurti kelis automobiliu objektus kurie turetu tokius parametrus:4. Susikurti Kuro Tipu ir kainu objekta,
+        //tipai:5-ta uzduotis sukurti funkcija, kuri priema automobilio objekta, ir kuro kainu objekta ir apskaiciuoja kiek kainuos nuvaziuoti 100km
+        //6. sukurti metoda, prie objekto i kuri padavus litro kaina, apsiskaiciuja 100km kaina
+
+        var car1 = {
+            Marke: 'Audi',
+            Modelis: 'A3',
+            Metai: '2000 m.',
+            Spalva: 'Juoda',
+            VidutinesKuroSanaudos100km: 5,
+            KuroTipas: 'Dyzelis',
+            KuroApsakaiciavimometodas: kiekKainuoja100km
         }
+        car1.PavaruDeze = 'Mechanine';
 
-        function print(arr, n) {
-            var count = 0;
-            for (var i = 0; i < arr.length; i++)
-                console.log(arr[i], [n])
+        var car2 = {
+            Marke: 'Toyota',
+            Modelis: 'Yaris',
+            Metai: '2005 m.',
+            Spalva: 'Balta',
+            VidutinesKuroSanaudos100km: 4,
+            KuroTipas: 'Benzinas',
+            KuroApsakaiciavimometodas: kiekKainuoja100km
         }
-
-        print(skaiciuMasyvas2D[2]);
-        console.log('ciklo iteraciju skaicius: ' + counter(skaiciuMasyvas2D));
+        car2.PavaruDeze = 'Automatine';
 
         var car3 = {
-            marke: 'Audi',
-            modelis: 'a3',
-            spalva: 'Juoda'
+            Marke: 'Honda',
+            Modelis: 'Civic',
+            Metai: '2012 m.',
+            Spalva: 'Geltona',
+            VidutinesKuroSanaudos100km: 3,
+            KuroTipas: 'Benzinas',
+            KuroApsakaiciavimometodas: kiekKainuoja100km
+        }
+        car3.PavaruDeze = 'Automatine';
+
+        var car4 = {
+            Marke: 'Volvo',
+            Modelis: 'xc70',
+            Metai: '2010 m.',
+            Spalva: 'Juoda',
+            VidutinesKuroSanaudos100km: 7,
+            KuroTipas: 'Dyzelis',
+            KuroApsakaiciavimometodas: kiekKainuoja100km
+        }
+        car4.PavaruDeze = 'Automatine';
+        var car5 = {
+            Marke: 'Vw',
+            Modelis: 'Golf',
+            Metai: '2014 m.',
+            Spalva: 'Pilka',
+            VidutinesKuroSanaudos100km: 9,
+            KuroTipas: 'Dujos',
+            KuroApsakaiciavimometodas: kiekKainuoja100km
+        }
+        car5.PavaruDeze = 'Mechanine';
+        var car6 = {
+            Marke: 'Vw',
+            Modelis: 'Golf',
+            Metai: '2017 m.',
+            Spalva: 'Juoda',
+            VidutinesKuroSanaudos100km: 9,
+            KuroTipas: 'Dujos',
+            KuroApsakaiciavimometodas: kiekKainuoja100km
+        }
+        car6.PavaruDeze = 'Mechanine';
+        var car7 = {
+            Marke: 'Audi',
+            Modelis: 'A8',
+            Metai: '2020 m.',
+            Spalva: 'Pilka',
+            VidutinesKuroSanaudos100km: 9,
+            KuroTipas: 'Dujos',
+            KuroApsakaiciavimometodas: kiekKainuoja100km
+        }
+        car7.PavaruDeze = 'Automatine';
+        var car8 = {
+            Marke: 'Honda',
+            Modelis: 'Legend',
+            Metai: '2007 m.',
+            Spalva: 'Pilka',
+            VidutinesKuroSanaudos100km: 15,
+            KuroTipas: 'Dujos',
+            KuroApsakaiciavimometodas: kiekKainuoja100km
+        }
+        car8.PavaruDeze = 'Automatine';
+
+        var kuroKainos = {
+            Benzinas: 1.59,
+            Dyzelis: 1.60,
+            Dujos: 0.70
         }
 
-        console.log(car3.marke);
+
+        function PriceToDrive(Car, FuelPrice) {
+
+            return Car.VidutinesKuroSanaudos100km * kuroKainos[Car.KuroTipas];
+        }
+        console.log(PriceToDrive(car1, kuroKainos));
+        console.log(PriceToDrive(car2, kuroKainos));
+        console.log(PriceToDrive(car3, kuroKainos));
+        console.log(PriceToDrive(car4, kuroKainos));
+        console.log(PriceToDrive(car5, kuroKainos));
+
+        function kiekKainuoja100km(Price) {
+            return Price[this.KuroTipas] * this.VidutinesKuroSanaudos100km
+        }
+        console.log('Kiek Kainuoja 100 km:' + car1.KuroApsakaiciavimometodas(kuroKainos));
+        console.log('Kiek Kainuoja 100 km:' + car2.KuroApsakaiciavimometodas(kuroKainos));
+        console.log('Kiek Kainuoja 100 km:' + car3.KuroApsakaiciavimometodas(kuroKainos));
+        console.log('Kiek Kainuoja 100 km:' + car4.KuroApsakaiciavimometodas(kuroKainos));
+        console.log('Kiek Kainuoja 100 km:' + car5.KuroApsakaiciavimometodas(kuroKainos));
+
+        //8. uzduotis sudeti masinas i masyva
+        //9.prie kiekvienos masinos objekto masyve, pridedi papildoma parametra, objekta
+
+        carArray = [car1, car2, car3, car4, car5, car6, car7, car8];
+
+        function AddGearTypeToCars(carArray) {
+            carArray.forEach(element => {
+                element.KebuloTipas = {
+                    Tipas: 'Sedanas',
+                    DuruSkaicius: 4
+                }
+            });
+        }
+        AddGearTypeToCars(carArray);
+        console.log(carArray);
+
+        //10. Sugrupuoti automobilius pagal Markes
+
+        arrayOfCars = [{
+            Marke: "Mercedes",
+            Modelis: "SL111",
+            Metai: 2015,
+            Spalva: "Pilka",
+            KuroSanaudos: 8.6,
+            KuroTipas: "Benzinas",
+        }, {
+            Marke: "Audi",
+            Modelis: "A4",
+            Metai: 2018,
+            Spalva: "Melyna",
+            KuroSanaudos: 7.2,
+            KuroTipas: "Dyzelinas"
+
+        }, {
+            Marke: "Fiat",
+            Modelis: "500",
+            Metai: 2012,
+            Spalva: "Zalia",
+            KuroSanaudos: 5.9,
+            KuroTipas: "Benzinas"
+        }, {
+            Marke: "Audi",
+            Modelis: 80,
+            Metai: 1987,
+            Spalva: "mėlyna",
+            KuroSanaudos: 9.2,
+            KuroTipas: "Benzinas",
+        }, {
+            Marke: "Ford",
+            Modelis: "Focus",
+            Metai: 1997,
+            Spalva: "žalia",
+            KuroSanaudos: 10.0,
+            KuroTipas: "Dujos",
+        }, {
+            Marke: "Volkswagen",
+            Modelis: "Passat",
+            Metai: 2005,
+            Spalva: "sidabrinė",
+            KuroSanaudos: 5.8,
+            KuroTipas: "Dyzelis",
+        }, {
+            Marke: "Toyota",
+            Modelis: "Corola",
+            Metai: 2007,
+            Spalva: "blue",
+            KuroSanaudos: 5,
+            KuroTipas: "Benzinas"
+        }, {
+            Marke: "Volvo",
+            Modelis: "S50",
+            Metai: 2012,
+            Spalva: "brown",
+            KuroSanaudos: 4,
+            KuroTipas: "Dyzelinas"
+        }, {
+            Marke: "Kia",
+            Modelis: "Ceed",
+            Metai: 2002,
+            Spalva: "Grey",
+            KuroSanaudos: 8,
+            KuroTipas: "Dujos"
+        }, {
+            Marke: "500",
+            Modelis: "fiat",
+            Metai: 2014,
+            Spalva: "balta",
+            KuroSanaudos: 7,
+            KuroTipas: "Benzinas"
+        }, {
+            Modelis: "Volkswagen",
+            Marke: "golf",
+            Metai: 2014,
+            Spalva: "balta",
+            KuroSanaudos: 6,
+            KuroTipas: "Dyzelinas"
+        }, {
+            Modelis: "Toyota",
+            Marke: "Sienna",
+            Metai: 2014,
+            Spalva: "bordo",
+            KuroSanaudos: 11,
+            KuroTipas: "Dujos"
+        }, {
+            Modelis: "BMW",
+            Marke: "420",
+            Metai: 2014,
+            Spalva: "juoda",
+            KuroSanaudos: 8,
+            KuroTipas: "Dyzelinas"
+        }, {
+            Marke: "Audi",
+            Modelis: "A6",
+            Metai: "2012",
+            Spalva: "Juoda",
+            KuroSanaudos: 7,
+            KuroTipas: "Dyzelinas"
+        }, {
+            Marke: "BMW",
+            Modelis: "5",
+            Metai: "2011",
+            Spalva: "Balta",
+            KuroSanaudos: 10,
+            KuroTipas: "Benzinas"
+        }, {
+            Marke: "Toyota",
+            Modelis: "Corolla",
+            Metai: "2019",
+            Spalva: "Raudona",
+            KuroSanaudos: 8,
+            KuroTipas: "Dujos"
+        }, {
+            Marke: "Mercedes Benz",
+            Modelis: "222",
+            Metai: "2020",
+            Spalva: "Juoda",
+            KuroSanaudos: 12,
+            KuroTipas: "Benzinas",
+        }];
+        console.log(arrayOfCars);
+
+        function GroupCarsByCarMake(arrayOfCars) {
+            var carMakes = [];
+            var result = [];
+
+            array.forEach(car => {
+                if (!carMakes.includes(car.Marke)) {
+                    carMakes.push(car.Marke);
+                }
+            });
+
+            carMakes.forEach(make => {
+                var grouped = {
+                    group: make,
+                    Cars: []
+                }
+
+                array.forEach(car => {
+                    if (grouped.group == car.Marke) {
+                        grouped.Cars.push(car);
+                    }
+                });
+
+                result.push(grouped);
+            });
+
+            return result;
+        }
+        console.log(GroupCarsByCarMake(arrayOfCars));
     </script>
 
 
