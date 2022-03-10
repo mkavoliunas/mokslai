@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 1 uzduotis
+
+        function factorial(number) {
+            if (number == 1) {
+                return number;
+            } else {
+                return number * factorial(number - 1);
+            }
+        }
+        factorial;
+        console.log(factorial(6));
+        console.log(factorial(15));
+
+        // // arrow funkcija
+
+        var factorialShort = (number) => number == 1 ? number : number * factorial(number - 1);
+
+        console.log(factorialShort(6));
+
+        // 2 uzduotis
+
+        function fibionachi(number) {
+            return number < 1 ? 0 :
+                number <= 2 ? 1 :
+                fibionachi(number - 1) + fibionachi(number - 2)
+        }
+
+        console.log(fibionachi(5));
+        // // arrow funkcija
+
+        var fibionachiShort = (number) => number < 1 ? 0 : number <= 2 ? 1 : fibionachiShort(number - 1) + fibionachiShort(number - 2);
+        console.log(fibionachiShort(5));
+
+        // 3 uzduotis
+
+        function FibionachiFinder(nth) {
+            if (nth <= 1) {
+                return nth;
+            }
+            return FibionachiFinder(nth - 1) + FibionachiFinder(nth - 2);
+        }
+        console.log(FibionachiFinder(2));
+
+        // arrow funkcija
+        var fibionachiShortArrow = (nth) => nth <= 1 ? nth : fibionachiShortArrow(nth - 1) + fibionachiShortArrow(nth - 2);
+        console.log(fibionachiShortArrow(2));
+        console.log(fibionachiShortArrow(6));
+
+        // 4 uzduotis
+
+        if (true === true) {
+            return true;
+        }
+        return teiginysLong(true) + teiginysLong(!false);
+
+        console.log(teiginysLong(false));
+
+        var teiginys = (number) => true === true ? true : teiginys(true) + teiginys(!false);
+        console.log(teiginys(false));
+
+        // 5 uzduotis suprastinti koda
+
+        var students = [{
+            name: "Mindaugas",
+            grades: [10, 5, 7]
+        }, {
+            name: "Jonas",
+            grades: [10, 5, 7]
+        }, {
+            name: "Ana",
+            grades: [10, 5, 7, 10]
+        }, ];
+
+        var studentsWithAvg = [];
+        for (var i = 0; i < students.length; i++) {
+            let sum = 0;
+            for (let j = 0; j < students[i].grades.length; j++) {
+                sum = sum + students[i].grades[j];
+            }
+            let avg = sum / students[i].grades.length;
+            studentsWithAvg.push({
+                "name": students[i].name,
+                "avg": avg
+            });
+        }
+        console.log(studentsWithAvg);
+
+        function StudentsWithAvarageReduce(students) {
+            var studentsWithAvg = [];
+            for (var i = 0; i < students.length; i++) {
+                let sum = students[i].grades.reduce((x, y) => x + y);
+                let avg = sum / students[i].grades.length;
+                studentsWithAvg.push({
+                    "name": students[i].name,
+                    "avg": avg
+                });
+
+            }
+            return studentsWithAvg;
+        }
+        console.log(StudentsWithAvarageReduce(students));
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

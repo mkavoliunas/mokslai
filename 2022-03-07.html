@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // var students = [{
+        //     name: "Mindaugas",
+        //     grades: [10, 5, 7]
+        // }, {
+        //     name: "Jonas",
+        //     grades: [10, 5, 7]
+        // }, {
+        //     name: "Ana",
+        //     grades: [10, 5, 7, 10]
+        // }, ];
+
+        // function StudentAveragesObject(students) {
+        //     avrStudentGrades = [];
+
+        //     students.forEach(student => {
+        //         var gradesSum = student.grades.reduce((prev, current) => prev + current);
+        //         var averageGrade = gradesSum / student.grades.length;
+        //         var avgStudentGrade = {
+        //             name: student.name,
+        //             averageGrade: averageGrade.toFixed(2)
+        //         };
+        //         avrStudentGrades.push(avgStudentGrade);
+        //     });
+        //     return avrStudentGrades;
+        // }
+        // console.log(StudentAveragesObject(students));
+
+        // 2.uzduotis
+
+        // let students = [{
+        //     name: "Mindaugas",
+        //     subject_grades: [{
+        //         subject_name: "Lietuvių",
+        //         grades: [10, 7, 8]
+        //     }, {
+        //         subject_name: "Matematika",
+        //         grades: [10, 7, 8]
+        //     }, ]
+        // }, {
+        //     name: "Jonas",
+        //     subject_grades: [{
+        //         subject_name: "Lietuvių",
+        //         grades: [5, 7, 8]
+        //     }, {
+        //         subject_name: "Matematika",
+        //         grades: [8, 7, 8]
+        //     }, ]
+        // }, ];
+
+        // function pazymiaiPagalDalyka(students) {
+
+        //     var subjectStudent = [];
+
+        //     students.forEach(student => {
+
+        //         var Subject = [];
+
+        //         student.Subject_grade.forEach(sub => {
+        //             var gradeSum = student.grade.reduce((prev, current) => prev + current);
+        //             var avgGrade = gradeSum / sub.grade.length;
+        //             let object = {
+        //                 subject_name: sub.subject_name,
+        //                 averageGrade: avgGrade.tofix(2)
+        //             };
+        //             Subjects.push(subject);
+        //         });
+        //         var subjectStudent = {
+        //             name: student.name,
+        //             subject_grades: Subjects
+        //         };
+        //         subjectStudent.push(subjecStudents);
+        //     });
+        //     return subjecStudents;
+        // }
+        // console.log(pazymiaiPagalDalyka(students));
+
+
+        var arrat = [2, 2, 4, 5, 89, 81, 5, 84, 984, 514, 21, 24, 842, 5814, 5, 54, 854, 584, 54, 5, 46, 4, 85];
+
+        console.log(arrat.reduce((a, b) => a + b, 0));
+        // tradicine funkcija
+        function tradicine(arrat) {
+            var suma = arrat.reduce((a, b) => a + b);
+            return suma;
+        }
+        console.log(tradicine(arrat));
+        // anonymus funkcija
+        var anonymus = function(arrat) {
+            return arrat.reduce((a, b) => a + b);
+        }
+        console.log(anonymus(arrat));
+        // arrow funkcija
+        var arrow = (arrat) => {
+            return arrat.reduce((a, b) => a + b);
+        }
+        console.log(arrow(arrat));
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
