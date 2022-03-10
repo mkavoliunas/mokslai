@@ -5,11 +5,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>2022-03-10</title>
 
-    <script>
-    </script>
+
 </head>
+<script>
+    // 1 uzduotis
+    class car {
+        constructor(make, model, color, engine, baseprice, ) {
+            this.name = name;
+            this.model = model;
+            this.color = color;
+            this.engine = engine;
+            this.baseprice = baseprice;
+        }
+
+        getPrice() {
+            return this.baseprice * this.engine.horsePower + (this.baseprice / 2 * this.engine.displacement);
+        }
+    }
+
+    class engine {
+        constructor(horsePower, displacement) {
+            this.horsePower = horsePower;
+            this.displacement = displacement;
+        }
+        hpToKw() {
+            return this.horsePower * 0.745;
+        }
+    }
+
+    var fordas = new car('ford', 'focus', 'geltona', new engine(70, 1.6), 5000);
+
+    console.log(fordas);
+    console.log(fordas.getPrice());
+    console.log(fordas.engine.hpToKw());
+
+    // 2 uzduotis, 3 uzduotis, 4 uzduotis parsyti funkcija, kuri du masyvus, (masyvai duoti kode), sujungia i viena ir issortina (isrykiauja):
+    // Parasyti funkcija, kuri is i pasirinkta masyvi vieta iterpia elementa
+    // parasyti funkcija kuri is pasirinktos vietos issiema objekta:
+
+    var numArrayOne = [1, 5, 9, 8, 7];
+    var numArrayTwo = [4, 8, 7, 9, 6, 3, 2, 1, 4];
+    var sujungti = numArrayOne.concat(numArrayTwo);
+    sujungti.sort();
+    sujungti.push('Labas');
+    sujungti.shift();
+
+    function mergeAndSortArrays(arr1, arr2) {
+
+        return numArrayOne.concat(numArrayTwo);
+
+    }
+    console.log(sujungti);
+    console.log(mergeAndSortArrays());
+
+    function AddtoCustomPlaceInArray(array, place, element) {
+        return array.push(1, "labas");
+    }
+    console.log(AddtoCustomPlaceInArray(numArrayOne));
+
+    function removetoCustomPlaceInArray(array, place) {
+        return array.slice(0, place).concat(array.slice(place + 1, array.length));
+    }
+
+    console.log(removetoCustomPlaceInArray(numArrayOne, 0));
+
+    // 5 uzduotis map, reduce, filter
+
+    var numbers1 = [45, 4, 9, 16, 25];
+    var zodis = 'ir';
+
+
+    function MappFunkcija(value, index) {
+        return value * index + index;
+    }
+
+    console.log(numbers1.map(MappFunkcija));
+
+
+    function ReduceFunkcija(total, sum) {
+        return total + sum;
+    }
+    console.log(numbers1.reduce(ReduceFunkcija));
+
+
+    function ApskaiciuotiVidurkiSureduce(previuos, value, index, array) {
+        if (index == array.length - 1) {
+            return ((previuos + value) / (index + 1));
+        } else {
+            return previuos + value;
+        }
+
+    }
+    console.log(numbers1.reduce(ApskaiciuotiVidurkiSureduce));
+
+    function Filtravimas(value) {
+        return value % 2 == 0;
+    }
+
+    console.log(numbers1.filter(Filtravimas));
+
+    function CustumJoin() {
+
+    }
+
+    console.log(numbers1.toString());
+    console.log(numbers1.join('ir'));
+</script>
 
 <body>
 
