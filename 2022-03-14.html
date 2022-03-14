@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022-03-12</title>
+</head>
+
+<body>
+
+    <script>
+        localStorage.clear();
+        //Pirma uzduotis, paklaust vartotojo vardo jei local storage nera jo,
+        // jei local storage, jau yra vartotojo, vardas, pasveikint ji sugryzus
+        if (localStorage.getItem("UserName")) { //jei nera tokio Key, local storage'e, graznima null reiksme, kas JS priskiriama, kaip false
+            console.log(`Sveiki sugryze ${localStorage.getItem("UserName")}`);
+        } else {
+            var userName = prompt("Please enter your name"); //promtas, per kuri useris suveda savo varda, issaugome suvesta varda i kintamaji,
+            localStorage.setItem("UserName", userName); // issaugome suvesta varda local storage, raktas: "UserName", Value: userName kintamoje reiksme, (tai ka suvede vartotojas)
+        }
+        document.cookie = "username=John Doe";
+
+        // Requeat paklausimas
+        var request = new Request('https://catfact.ninja/fact', {
+            method: 'GET',
+            headers: new Headers({
+                'Content-Type': 'application/json'
+            })
+        });
+
+        var catFact = [];
+
+        for (let i = 0; i < 100; i++) {
+            fetch(request)
+                .then(response => response.json())
+                .then(catfact => console.log(catfact.fact))
+                .catch(error => console.error(error))
+                .finally(() => {
+                    // console.log(catFact);
+                });
+        }
+    </script>
+</body>
+
+</html>
